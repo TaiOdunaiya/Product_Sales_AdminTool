@@ -16,26 +16,36 @@ export class SalesByCategoryComponent implements OnInit {
     this.chart = new Chart({
       chart: {
         type: 'pie',
-        height: 325,
+        height: 350
       },
       title: {
-        text: 'sales by Category',
+        text: 'Sales by Category'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true
+        }
       },
       series: [
         {
           type: 'pie',
           data: [
-            { name: 'Electronics', y: 41.0, color: '#044342' },
-            { name: 'Groceries', y: 33.8, color: '#7e0505' },
-            { name: 'Cosmetics', y: 6.5, color: '#ed9e20' },
-            { name: 'Clothes', y: 15.2, color: '#6920fb' },
-            { name: 'Appliances', y: 3.5, color: '#121212' },
-          ],
-        },
+            { name: 'Electronics', y: 41.0, color: '#005A7A' },
+            { name: 'Groceries', y: 33.8, color: '#056776' },
+            { name: 'Clothes', y: 17.2, color: '#089AB0' },
+            { name: 'Cosmetics', y: 8.0, color: '#0ACDEB' },
+            { name: 'Appliances', y: 3.8, color: '#99F1FF' }
+          ]
+        }
       ],
       credits: {
-        enabled: false,
-      },
+        enabled: false
+      }
     });
   }
 

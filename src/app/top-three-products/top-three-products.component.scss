@@ -1,3 +1,111 @@
 .chart-container {
     padding: 20px;
   }
+
+.top-products {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .title {
+        color: var(--text-primary);
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .product-list {
+        .product {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: var(--primary-bg);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateX(5px);
+                background-color: var(--primary-light);
+                
+                .product-details .product-name,
+                .product-details .product-category,
+                .product-sales {
+                    color: var(--text-light);
+                }
+            }
+
+            .rank {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: var(--primary-medium);
+                color: var(--text-light);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                margin-right: 15px;
+            }
+
+            .product-details {
+                flex-grow: 1;
+
+                .product-name {
+                    color: var(--text-primary);
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                .product-category {
+                    color: var(--text-primary);
+                    opacity: 0.7;
+                    font-size: 14px;
+                }
+            }
+
+            .product-sales {
+                color: var(--text-primary);
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+:host-context(.dark-theme) {
+    .top-products {
+        background-color: var(--secondary-bg);
+
+        .title {
+            color: var(--text-light);
+        }
+
+        .product-list {
+            .product {
+                background-color: var(--primary-dark);
+
+                .product-details {
+                    .product-name,
+                    .product-category {
+                        color: var(--text-light);
+                    }
+                }
+
+                .product-sales {
+                    color: var(--text-light);
+                }
+
+                &:hover {
+                    background-color: var(--primary-light);
+                }
+            }
+        }
+    }
+}

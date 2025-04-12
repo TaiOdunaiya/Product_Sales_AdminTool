@@ -1,30 +1,97 @@
 .header {
-    height: 70px;
-    padding: 20px 50px;
-    background-color: rgb(1, 38, 69);
-    color: #fff;
     display: flex;
     justify-content: space-between;
-    box-shadow: 5px 5px 5px #939393;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
     .logo {
-      font-weight: bold;
-      font-size: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--text-light);
     }
-    .user {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      .user-image {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        background-color: rgb(11, 107, 185);
-        margin-left: 20px;
+
+    .header-right {
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-weight: bold;
-      }
+        gap: 20px;
     }
-  }
+
+    .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: var(--hover-color);
+        }
+
+        fa-icon {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .user-name {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .user-image {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            border: 2px solid var(--accent-light);
+        }
+    }
+}
+
+// Dark theme styles
+:host-context(.dark-theme) {
+    .header {
+        background-color: var(--primary-dark);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+        .logo {
+            color: var(--text-light);
+        }
+
+        .theme-toggle {
+            &:hover {
+                background-color: var(--hover-color);
+            }
+
+            fa-icon {
+                color: var(--text-light);
+            }
+        }
+
+        .user {
+            .user-name {
+                color: var(--text-light);
+            }
+
+            .user-image {
+                background-color: var(--accent-teal);
+                color: var(--text-light);
+                border-color: var(--primary-light);
+            }
+        }
+    }
+}

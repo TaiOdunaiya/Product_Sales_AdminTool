@@ -1,7 +1,12 @@
 <div class="header">
     <div class="logo">ADMIN TOOL</div>
-    <div class="user">
-        <div class="user-name">NewUser</div>
-        <div class="user-image">HI</div>
+    <div class="header-right">
+        <button class="theme-toggle" (click)="toggleTheme()">
+            <fa-icon [icon]="isDarkMode ? faSun : faMoon"></fa-icon>
+        </button>
+        <div class="user">
+            <div class="user-name">NewUser</div>
+            <div class="user-image">HI</div>
+        </div>
     </div>
 </div>

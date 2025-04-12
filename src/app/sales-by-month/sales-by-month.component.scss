@@ -1,3 +1,36 @@
-.chart-container {
+.sales-by-month {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
     padding: 20px;
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .title {
+        color: var(--text-primary);
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .chart-container {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px #939393;
+    }
+}
+
+:host-context(.dark-theme) {
+    .sales-by-month {
+        background-color: var(--secondary-bg);
+        
+        .title {
+            color: var(--text-light);
+        }
+    }
+}

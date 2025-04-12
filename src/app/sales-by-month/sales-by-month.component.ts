@@ -1,6 +1,7 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-import {ChartModule} from 'angular-highcharts'
+import { ChartModule } from 'angular-highcharts';
+import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-sales-by-month',
@@ -9,17 +10,16 @@ import {ChartModule} from 'angular-highcharts'
   templateUrl: './sales-by-month.component.html',
   styleUrl: './sales-by-month.component.scss'
 })
-export class SalesByMonthComponent implements OnInit{
-
+export class SalesByMonthComponent implements OnInit {
   chart = new Chart({
-    chart:{
+    chart: {
       type: 'line',
-      height: 325
+      height: 350
     },
-    title:{
+    title: {
       text: 'Month wise sales'
     },
-    xAxis:{
+    xAxis: {
       categories: [
         'Jan',
         'Feb',
@@ -35,22 +35,22 @@ export class SalesByMonthComponent implements OnInit{
         'Dec'
       ]
     },
-    yAxis:{
+    yAxis: {
       title: {
-        text: 'Revenue in $'
+        text: ''
       }
     },
     series: [
       {
         name: "Texas",
         type: "line",
-        color: '#044342',
+        color: '#005A7A',
         data: [70, 69, 95, 145, 182, 215, 252, 265, 233, 183, 139, 196]
       },
       {
         name: 'Florida',
         type: 'line',
-        color: '#7e0505',
+        color: '#089AB0',
         data: [
           47, 52, 44, 35, 58, 69, 32, 53, 71, 82, 99, 159
         ]
@@ -58,7 +58,7 @@ export class SalesByMonthComponent implements OnInit{
       {
         name: 'Ohio',
         type: 'line',
-        color: '#ed9e20',
+        color: '#0ACDEB',
         data: [
           17, 22, 14, 25, 18, 19, 22, 43, 11, 32, 29, 59
         ]
@@ -67,11 +67,10 @@ export class SalesByMonthComponent implements OnInit{
     credits: {
       enabled: false
     }
-  })
+  });
 
-constructor(){}
+  constructor() { }
 
-ngOnInit(): void {
-    
-}
+  ngOnInit(): void {
+  }
 }

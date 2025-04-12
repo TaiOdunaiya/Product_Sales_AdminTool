@@ -38,17 +38,17 @@ export class TopThreeProductsComponent implements OnInit {
         {
           name: 'Lenova Thinkpad E15',
           y: 395,
-          color: '#044342',
+          color: '#005A7A'
         },
         {
           name: 'Nectar Orange Juice',
           y: 385,
-          color: '#7e0505',
+          color: '#056776'
         },
         {
           name: 'Axe Deodarant',
           y: 275,
-          color: '#ed9e20',
+          color: '#089AB0'
         },
       ]
      }
