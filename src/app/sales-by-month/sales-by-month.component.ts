@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
 import { ChartModule } from 'angular-highcharts';
-import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-sales-by-month',
@@ -62,7 +61,7 @@ export class SalesByMonthComponent implements OnInit {
         data: [
           17, 22, 14, 25, 18, 19, 22, 43, 11, 32, 29, 59
         ]
-      },
+      }
     ],
     credits: {
       enabled: false
