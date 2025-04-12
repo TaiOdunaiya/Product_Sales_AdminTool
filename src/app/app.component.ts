@@ -12,5 +12,5 @@ import { MainComponent } from "./main/main.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'PhotoLocal_AdminTool';
+  title = 'product-sales-admin-tool';
 }
